@@ -1,9 +1,10 @@
 --[[--------------------------------------------------------------------
 	Broker Instance Difficulty
 	Shows the current instance difficulty on your DataBroker display.
+	Copyright (c) 2014 Phanx <addon@phanx.net>. All rights reserved.
 	http://www.wowinterface.com/downloads/info22729-InstanceDifficulty
-	http://www.curse.com/addons/wow/broker-instancedifficulty
-	Copyright (c) 2014 Phanx. All rights reserved.
+	http://www.curse.com/addons/wow/broker-instance-difficulty
+	https://github.com/Phanx/Broker_InstanceDifficulty
 ----------------------------------------------------------------------]]
 
 -- Change the "" to something else (eg. "None") if you want to see text
@@ -113,6 +114,11 @@ f:SetScript("OnEvent", function(self, event, ...)
 	end
 
 	local _, instanceType, difficulty, _, maxPlayers = GetInstanceInfo()
+
+	if instanceType == "party" and maxPlayers == 40 then
+		-- garrison, go away
+		instanceType = "none"
+	end
 
 	local color
 	if isGuildGroup then
