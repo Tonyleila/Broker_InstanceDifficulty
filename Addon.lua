@@ -98,6 +98,17 @@ local hideCount = {
 	[17] = true, -- new LFR
 }
 
+local garrisonMaps = {
+	[1152] = true, -- FW Horde Garrison Level 1
+	[1330] = true, -- FW Horde Garrison Level 2
+	[1153] = true, -- FW Horde Garrison Level 3
+	[1154] = true, -- FW Horde Garrison Level 4
+	[1158] = true, -- SMV Alliance Garrison Level 1
+	[1331] = true, -- SMV Alliance Garrison Level 2
+	[1159] = true, -- SMV Alliance Garrison Level 3
+	[1160] = true, -- SMV Alliance Garrison Level 4
+}
+
 local f = CreateFrame("Frame")
 f:RegisterEvent("GROUP_ROSTER_UPDATE")
 f:RegisterEvent("GUILD_PARTY_STATE_UPDATED")
@@ -113,9 +124,9 @@ f:SetScript("OnEvent", function(self, event, ...)
 		RequestGuildPartyState()
 	end
 
-	local _, instanceType, difficulty, _, maxPlayers = GetInstanceInfo()
+	local _, instanceType, difficulty, _, maxPlayers, _, _, instanceMapID = GetInstanceInfo()
 
-	if instanceType == "party" and maxPlayers == 40 then
+	if garrisonMaps[instanceMapID] then
 		-- garrison, go away
 		instanceType = "none"
 	end
