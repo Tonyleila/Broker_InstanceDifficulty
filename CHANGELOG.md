@@ -1,3 +1,7 @@
+### Version 6.0.3.11
+
+* Garrisons will no longer be displayed as instances
+
 ### Version 6.0.3.10
 
 * Updated for raid difficulty changes in WoD

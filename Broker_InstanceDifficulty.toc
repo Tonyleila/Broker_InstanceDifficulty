@@ -1,5 +1,5 @@
 ## Interface: 60000
-## Version: 6.0.3.10
+## Version: @project-version@
 
 ## Title: Broker: Instance Difficulty
 ## Notes: Shows the current instance difficulty on your DataBroker display.
