@@ -1,7 +1,7 @@
 --[[--------------------------------------------------------------------
 	Broker Instance Difficulty
 	Shows the current instance difficulty on your DataBroker display.
-	Copyright (c) 2014 Phanx <addon@phanx.net>. All rights reserved.
+	Copyright (c) 2014-2015 Phanx <addon@phanx.net>. All rights reserved.
 	http://www.wowinterface.com/downloads/info22729-InstanceDifficulty
 	http://www.curse.com/addons/wow/broker-instance-difficulty
 	https://github.com/Phanx/Broker_InstanceDifficulty

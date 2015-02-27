@@ -1,3 +1,7 @@
+### Version 6.1.0.4
+
+* Updated for WoW 6.1
+
 ### Version 6.0.3.11
 
 * Garrisons will no longer be displayed as instances
