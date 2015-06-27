@@ -14,7 +14,7 @@ local DEFAULT_TEXT = ""
 ------------------------------------------------------------------------
 
 local DIFFICULTY = "Difficulty"
-local LFR, NORMAL, HEROIC, MYTHIC, CHALLENGE = "LFR", "N", "H", "M", "C"
+local LFR, NORMAL, HEROIC, MYTHIC, CHALLENGE, TIMEWALKER = "LFR", "N", "H", "M", "C", "T"
 if GetLocale() == "deDE" then
 	DIFFICULTY = "Schwierigkeit"
 	LFR = "SNS"
@@ -89,6 +89,8 @@ local difficultyText = {
 	[15] = HEROIC,
 	[16] = MYTHIC,
 	[17] = LFR,
+	[23] = MYTHIC, -- 5 Player (MYTHIC)
+	[24] = TIMEWALKER, -- 5 Player (TIMEWALKER)
 }
 
 local hideCount = {
